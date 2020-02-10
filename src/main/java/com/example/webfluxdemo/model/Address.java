@@ -1,16 +1,29 @@
 package com.example.webfluxdemo.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.relational.core.mapping.Table;
-
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@Table("ADDRESS")
 public class Address {
-    String id,zipCode, city, street;
+    String zipCode, city, street;
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
 }

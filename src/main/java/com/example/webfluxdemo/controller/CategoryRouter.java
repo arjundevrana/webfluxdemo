@@ -19,7 +19,7 @@ public class CategoryRouter {
     public PersonRepository personRepository;
     @Bean
     public RouterFunction<ServerResponse> getAllCategoriesRoute() {
-        return route(GET("route/person"),
+        return route(GET("rout/person"),
                 req -> 
                   ok().body(
                           personRepository.findAll(), Person.class)
