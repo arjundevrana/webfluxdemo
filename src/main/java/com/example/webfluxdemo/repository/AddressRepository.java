@@ -12,7 +12,7 @@ public class AddressRepository {
     @Autowired
     DatabaseClient client;
     public   Mono<Void>  createAddressSchema(){
-        Mono<Void> completion = client.execute("CREATE TABLE ADDRESS_NEW " +
+        Mono<Void> completion = client.execute("CREATE TABLE ADDRESS " +
                 "(ID VARCHAR(255) PRIMARY KEY, ZIP_CODE VARCHAR(255)," +
                 " CITY VARCHAR(255),STREET VARCHAR(255));")
                 .then();

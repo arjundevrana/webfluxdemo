@@ -1,7 +1,7 @@
 package com.example.webfluxdemo.controller;
 
 import com.example.webfluxdemo.model.Person;
-import com.example.webfluxdemo.repository.PersonRepository;
+import com.example.webfluxdemo.repository.PersonInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 public class CategoryRouter {
 
     @Autowired
-    public PersonRepository personRepository;
+    public PersonInfoRepository personRepository;
     @Bean
     public RouterFunction<ServerResponse> getAllCategoriesRoute() {
         return route(GET("route/person"),
